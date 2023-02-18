@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import LoginPage from './login';
 import ProfilePage from './assets/profile';
+import Image from 'next/image';
 export default function Home() {
   const [imagesArray, setImagesArray] = useState([]);
 
@@ -25,25 +26,22 @@ export default function Home() {
   return (
     <>
       <section>
-        <header>
-          <div className="sticky">
-            <div className="home">
-              <div>
-                <a href="#" className="name">
-                  <h2>Medicoin</h2>
-                </a>
-              </div>
-            </div>
+        <div className="sticky">
+          <div className="home">
+            <a href="#" className="name">
+              <h2>Medi<span className="yellow_text">Coin</span></h2>
+            </a>
+          </div>
+          <div className = "pfp-token">
             <ul>
-              <li><a href="#">Daily</a></li>
-              <li><a href="#">Checkup</a></li>
-              <li><a href="#">Tokens</a></li>
-              <li><a><ProfilePage></ProfilePage></a></li>
+              <li><a><Image src="/logo.png" alt="coin" width="16" height="16" className="icon"/></a></li>
+              <li><a href="#">143</a></li>
+              <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li>
+              {/* <li><a><ProfilePage></ProfilePage></a></li> */}
             </ul>
           </div>
-        </header>
+        </div>
         <LoginPage></LoginPage>
-        {/* <ProfilePage></ProfilePage> */}
         <div className="upload">
           <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
           <div>
