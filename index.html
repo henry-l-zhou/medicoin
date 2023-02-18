@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Medicoin</title>
+</head>
+
+<body>
+    <section>
+        <header>
+            <div class="home">
+                <div>
+                    <a href="index.html" class="name">
+                        <h2>Medicoin</h2>
+                    </a>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#">Daily</a></li>
+                <li><a href="#">Checkup</a></li>
+                <li><a href="#">Tokens</a></li>
+            </ul>
+        </header>
+        <!-- <div class = "upload">
+        <input type="file" accept="image/jpeg, image/png, image/jpg">
+        <output></output>
+    </div> -->
+    </section>
+</body>
+<script>
+    const input = document.querySelector("input")
+    const output = document.querySelector("output")
+    let imagesArray = []
+
+
+    input.addEventListener("change", () => {
+        const file = input.files
+        imagesArray.push(file[0])
+        displayImages()
+    })
+
+    function displayImages() {
+        let images = ""
+        imagesArray.forEach((image, index) => {
+            images += `<div class="image">
+                <img src="${URL.createObjectURL(image)}" alt="image">
+                <span onclick="deleteImage(${index})">&times;</span>
+              </div>`
+        })
+        output.innerHTML = images
+    }
+
+    function deleteImage(index) {
+        imagesArray.splice(index, 1)
+        displayImages()
+    }
+
+</script>
+
+</html>
