@@ -12,6 +12,7 @@
 <body>
     <section>
         <header>
+            <div class="sticky">
             <div class="home">
                 <div>
                     <a href="index.html" class="name">
@@ -24,41 +25,43 @@
                 <li><a href="#">Checkup</a></li>
                 <li><a href="#">Tokens</a></li>
             </ul>
+        </div>
         </header>
-        <!-- <div class = "upload">
-        <input type="file" accept="image/jpeg, image/png, image/jpg">
-        <output></output>
-    </div> -->
+        <div class="upload">
+            <input type="file" accept="image/jpeg, image/png, image/jpg">
+            <output></output>
+        </div>
     </section>
-</body>
-<script>
-    const input = document.querySelector("input")
-    const output = document.querySelector("output")
-    let imagesArray = []
+
+    <script>
+        const input = document.querySelector("input")
+        const output = document.querySelector("output")
+        let imagesArray = []
 
 
-    input.addEventListener("change", () => {
-        const file = input.files
-        imagesArray.push(file[0])
-        displayImages()
-    })
+        input.addEventListener("change", () => {
+            const file = input.files
+            imagesArray.push(file[0])
+            displayImages()
+        })
 
-    function displayImages() {
-        let images = ""
-        imagesArray.forEach((image, index) => {
-            images += `<div class="image">
+        function displayImages() {
+            let images = ""
+            imagesArray.forEach((image, index) => {
+                images += `<div class="image">
                 <img src="${URL.createObjectURL(image)}" alt="image">
                 <span onclick="deleteImage(${index})">&times;</span>
               </div>`
-        })
-        output.innerHTML = images
-    }
+            })
+            output.innerHTML = images
+        }
 
-    function deleteImage(index) {
-        imagesArray.splice(index, 1)
-        displayImages()
-    }
+        function deleteImage(index) {
+            imagesArray.splice(index, 1)
+            displayImages()
+        }
 
-</script>
+    </script>
+</body>
 
 </html>
