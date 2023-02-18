@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import LoginPage from './login';
+import ProfilePage from './assets/profile';
 export default function Home() {
   const [imagesArray, setImagesArray] = useState([]);
 
@@ -22,24 +24,29 @@ export default function Home() {
 
   return (
     <>
-    <section>
-      <header>
-          <div className="home">
+      <section>
+        <header>
+          <div className="sticky">
+            <div className="home">
               <div>
-                  <a href="#" className="name">
-                      <h2>Medicoin</h2>
-                  </a>
+                <a href="#" className="name">
+                  <h2>Medicoin</h2>
+                </a>
               </div>
-          </div>
-          <ul>
+            </div>
+            <ul>
               <li><a href="#">Daily</a></li>
               <li><a href="#">Checkup</a></li>
               <li><a href="#">Tokens</a></li>
-          </ul>
-      </header>    
-      <div className="upload">
-            <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange}/>
-            <div>
+              <li><a><ProfilePage></ProfilePage></a></li>
+            </ul>
+          </div>
+        </header>
+        <LoginPage></LoginPage>
+        {/* <ProfilePage></ProfilePage> */}
+        <div className="upload">
+          <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
+          <div>
             {imagesArray.map((image, index) => (
               <div className="image" key={index}>
                 <img src={URL.createObjectURL(image)} alt="image" />
@@ -48,7 +55,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-    </section>
+      </section>
     </>
   )
 }
