@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import LoginPage from './login';
 import ProfilePage from '../components/profile';
 import Image from 'next/image';
 import { useSession, signIn, signOut } from "next-auth/react";
+import { TokenContext } from '@/contexts/TokenContext';
 
 function LoginCheck() {
 
@@ -20,8 +21,12 @@ function LoginCheck() {
 }
 
 export default function Home() {
-  const [imagesArray, setImagesArray] = useState([]);
-
+  const [ imagesArray, setImagesArray ] = useState([]);
+  const tokenMode = useContext(TokenContext);
+  
+  const addTokens = () => {
+    tokenMode.setTokenAmount(tokenMode.tokenAmount + 1)
+  }
   const handleChange = (event) => {
     const file = event.target.files[0];
     const index = imagesArray.findIndex((image) => image.name === file.name);
@@ -52,7 +57,7 @@ export default function Home() {
           <div className="pfp-token">
             <ul>
               <li><a><Image src="/logo.png" alt="coin" width="18" height="18" className="icon" /></a></li>
-              <li><a href="#" className = "token_amount">143</a></li>
+              <li><a href="#" className = "token_amount"> {tokenMode.tokenAmount} </a></li>
               <LoginCheck/>
               {/* <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li> */}
               {/* <li><a><ProfilePage></ProfilePage></a></li> */}
@@ -60,6 +65,7 @@ export default function Home() {
           </div>
         </div>
         <LoginPage/>
+        <button onClick={addTokens}> Add 1 Token</button>
         <div className="upload">
           <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
           <div>
