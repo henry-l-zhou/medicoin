@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Image from 'next/image';
 import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function ProfilePage() {
@@ -6,7 +7,7 @@ export default function ProfilePage() {
     if (session) {
         return (
             <div>
-                <p><img src = {session.user.image} className = "pfp"></img></p>
+                <p><Image src = {session.user.image} alt="me" width="64" height="64" className="pfp"/></p>
             </div>
         )
     }
