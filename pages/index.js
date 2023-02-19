@@ -2,6 +2,23 @@ import React, { useState } from 'react';
 import LoginPage from './login';
 import ProfilePage from './assets/profile';
 import Image from 'next/image';
+import { useSession, signIn, signOut } from "next-auth/react";
+
+function logincheck() {
+
+  const { data: session } = useSession()
+
+  return (
+    <div>
+      {session ? (
+        <li><a><ProfilePage></ProfilePage></a></li>
+      ) : (
+        <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li>
+      )}
+    </div>
+  );
+}
+
 export default function Home() {
   const [imagesArray, setImagesArray] = useState([]);
 
@@ -32,11 +49,12 @@ export default function Home() {
               <h2>Medi<span className="yellow_text">Coin</span></h2>
             </a>
           </div>
-          <div className = "pfp-token">
+          <div className="pfp-token">
             <ul>
-              <li><a><Image src="/logo.png" alt="coin" width="16" height="16" className="icon"/></a></li>
-              <li><a href="#">143</a></li>
-              <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li>
+              <li><a><Image src="/logo.png" alt="coin" width="18" height="18" className="icon" /></a></li>
+              <li><a href="#" className = "token_amount">143</a></li>
+              {logincheck()}
+              {/* <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li> */}
               {/* <li><a><ProfilePage></ProfilePage></a></li> */}
             </ul>
           </div>

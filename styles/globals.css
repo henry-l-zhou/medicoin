@@ -34,12 +34,12 @@ section{
 .sticky{
   z-index: 2;
   position: fixed;
-  background-color: #5646c4;
+  background-color: #0087d8;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
-  padding: 20px 100px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,6 +83,10 @@ section{
   text-decoration: none;
   position: relative;
   display: flex;
+}
+.token_amount{
+  padding-right: 10px;
+  font-size: 1.5em;
 }
 
 output {
