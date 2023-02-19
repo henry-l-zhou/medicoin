@@ -21,7 +21,7 @@ export default function LoginPage() {
     } else {
       return (
         <div>
-          <p> You are not signed on </p>
+          <p> You are not signed in </p>
           <button onClick={() => signIn()}> Sign in </button>
         </div>
       )

@@ -1,12 +1,12 @@
 import React, { useState, useContext } from 'react';
 import LoginPage from './login';
-import SliderPage from './slider';
 import ProfilePage from '../components/profile';
+import CalendarApp from '../components/calendar';
+import SwiperPage from '../components/swiper';
 import Image from 'next/image';
 import { useSession, signIn, signOut } from "next-auth/react";
 import { TokenContext } from '@/contexts/TokenContext';
-import { SwiperContext } from '@/contexts/SwiperContext';
-import Swiper from './tester/js/swiper-bundle.min.js';
+
 
 
 function LoginCheck() {
@@ -50,47 +50,6 @@ export default function Home() {
     );
   };
 
-
-
-  const swiper = useContext(SwiperContext)
-  const swiperRefresh = () => {
-    new Swiper(".slide-container", {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      sliderPerGroup: 4,
-      loop: true,
-      centerSlide: "true",
-      fade: "true",
-      grabCursor: "true",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        520: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1000: {
-          slidesPerView: 4,
-        },
-      },
-    });
-  }
-
-
-
   return (
     <>
       <section>
@@ -112,8 +71,11 @@ export default function Home() {
           <div className="welcome">
             <LoginPage />
           </div>
+          <div className = "swiper_landing">
+            <SwiperPage />
+          </div>
           <div>
-            <SliderPage />
+            <CalendarApp/>
           </div>
           {/* <button onClick={() => addTokens(1)}> Add 1 Token</button> */}
           {/* <div className="upload">
