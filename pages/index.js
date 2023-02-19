@@ -24,8 +24,8 @@ export default function Home() {
   const [ imagesArray, setImagesArray ] = useState([]);
   const tokenMode = useContext(TokenContext);
   
-  const addTokens = () => {
-    tokenMode.setTokenAmount(tokenMode.tokenAmount + 1)
+  const addTokens = (number) => {
+    tokenMode.setTokenAmount(tokenMode.tokenAmount + number)
   }
   const handleChange = (event) => {
     const file = event.target.files[0];
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </div>
         <LoginPage/>
-        <button onClick={addTokens}> Add 1 Token</button>
+        <button onClick={() => addTokens(1)}> Add 1 Token</button>
         <div className="upload">
           <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
           <div>
