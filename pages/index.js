@@ -4,7 +4,7 @@ import ProfilePage from './assets/profile';
 import Image from 'next/image';
 import { useSession, signIn, signOut } from "next-auth/react";
 
-function logincheck() {
+function LoginCheck() {
 
   const { data: session } = useSession()
 
@@ -53,13 +53,13 @@ export default function Home() {
             <ul>
               <li><a><Image src="/logo.png" alt="coin" width="18" height="18" className="icon" /></a></li>
               <li><a href="#" className = "token_amount">143</a></li>
-              {logincheck()}
+              <LoginCheck/>
               {/* <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li> */}
               {/* <li><a><ProfilePage></ProfilePage></a></li> */}
             </ul>
           </div>
         </div>
-        <LoginPage></LoginPage>
+        <LoginPage/>
         <div className="upload">
           <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
           <div>
