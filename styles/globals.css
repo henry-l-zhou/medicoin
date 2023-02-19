@@ -14,7 +14,6 @@ section{
   position: relative;
   width: 100%;
   min-height: 100vh;
-  padding: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,6 +88,53 @@ section{
   font-size: 1.5em;
 }
 
+.welcome{
+  position: relative;
+  display: block;
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+.signin-message{
+  position: relative;
+  width: auto;
+  font-size: 3ch;
+}
+.logout-message{
+  padding-top: 30px;
+
+  position: relative;
+  width: auto;
+  font-size: 2ch;
+}
+.logout-message p{
+  padding-bottom: 10px;
+}
+
+.page_elements{
+  top: 13ch;
+  align-self: center;
+  position: fixed;
+  display: block;
+  width: 100%;
+}
+.welcome button{
+  padding: 5px 15px;
+  background: #0087d8;
+  color: #e8be35;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.upload{
+  position: relative;
+  display: block;
+  text-align: center;
+  height: auto;
+  width: auto;
+ 
+}
 output {
     width: 100%;
     min-height: 150px;
@@ -129,3 +175,4 @@ output .image span:hover {
 output .span--hidden {
     visibility: hidden;
 }
+

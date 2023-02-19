@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import LoginPage from './login';
 import ProfilePage from '../components/profile';
+import SwiperPage from '../components/swiper';
 import Image from 'next/image';
 import { useSession, signIn, signOut } from "next-auth/react";
 import { TokenContext } from '@/contexts/TokenContext';
@@ -27,6 +28,7 @@ export default function Home() {
   const addTokens = (number) => {
     tokenMode.setTokenAmount(tokenMode.tokenAmount + number)
   }
+  
   const handleChange = (event) => {
     const file = event.target.files[0];
     const index = imagesArray.findIndex((image) => image.name === file.name);
@@ -65,6 +67,7 @@ export default function Home() {
           </div>
         </div>
         <LoginPage/>
+        <SwiperPage></SwiperPage>
         <button onClick={() => addTokens(1)}> Add 1 Token</button>
         <div className="upload">
           <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
