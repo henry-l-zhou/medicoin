@@ -7,9 +7,15 @@ export default function LoginPage() {
     if (session) {
       return (
         <div> 
-          <p>Welcome, {session.user.name} </p>
+          <div className = "signin-message">
+            <p>Welcome, {session.user.name}!</p>
+            <p>Here are your goals for today</p>
+          </div>
           
-          <button onClick={()=> signOut()}> Sign Out </button>
+          <div className = "logout-message">
+            <p>Not {session.user.name}?</p>
+            <button onClick={()=> signOut()}> Sign Out </button>
+            </div>
         </div>
       )
     } else {

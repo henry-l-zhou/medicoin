@@ -13,7 +13,7 @@ function LoginCheck() {
       {session ? (
         <li><a><ProfilePage></ProfilePage></a></li>
       ) : (
-        <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li>
+        <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp" /></a></li>
       )}
     </div>
   );
@@ -52,24 +52,39 @@ export default function Home() {
           <div className="pfp-token">
             <ul>
               <li><a><Image src="/logo.png" alt="coin" width="18" height="18" className="icon" /></a></li>
-              <li><a href="#" className = "token_amount">143</a></li>
-              <LoginCheck/>
+              <li><a href="#" className="token_amount">143</a></li>
+              <LoginCheck />
               {/* <li><a><Image src="/profile_icon.webp" alt="me" width="64" height="64" className="pfp"/></a></li> */}
               {/* <li><a><ProfilePage></ProfilePage></a></li> */}
             </ul>
           </div>
         </div>
-        <LoginPage/>
-        <div className="upload">
-          <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
-          <div>
-            {imagesArray.map((image, index) => (
-              <div className="image" key={index}>
-                <img src={URL.createObjectURL(image)} alt="image" />
-                <span onClick={() => handleDelete(index)}>&times;</span>
-              </div>
-            ))}
+        <div className="page_elements">
+          <div className="welcome">
+            <LoginPage />
           </div>
+          <div className = "card_container">
+            <div className = "card_container_content">
+              <div className = "card">
+                <div className = "card_content">
+                  <div className = "card_image">
+                    <Image src="/uno.png" alt="card" width="140" height="140" className="icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="upload">
+            <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
+            <div>
+              {imagesArray.map((image, index) => (
+                <div className="image" key={index}>
+                  <img src={URL.createObjectURL(image)} alt="image" />
+                  <span onClick={() => handleDelete(index)}>&times;</span>
+                </div>
+              ))}
+            </div>
+          </div> */}
         </div>
       </section>
     </>
