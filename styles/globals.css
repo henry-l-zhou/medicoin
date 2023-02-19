@@ -212,6 +212,9 @@ output .span--hidden {
   
 
 }
+abbr[title] {
+  text-decoration: none;
+}
 .center-screen {
   display: flex;
   justify-content: center;
@@ -278,7 +281,7 @@ output .span--hidden {
 .react-calendar__navigation button {
   font-weight: bold;
   font:'Futura';
-
+  font-size: large;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   min-width: 44px;
@@ -295,15 +298,15 @@ output .span--hidden {
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1;
+  font-weight: 400;
+  font-size: large;
   color: #b5bab5;
   font:'Futura';
 
   
 }
 .react-calendar__month-view__weekdays__weekday {
-  padding: 0.5em;
+  text-decoration: none;
 }
 .react-calendar__month-view__weekNumbers .react-calendar__tile {
   display: flex;
@@ -338,7 +341,7 @@ output .span--hidden {
   line-height: 16px;
   color: #534bbd;
   font-weight: 2000px;
-  font-size: 14px;
+  font-size: 16px;
 
 }
 .react-calendar__tile:disabled {
@@ -350,7 +353,7 @@ output .span--hidden {
 }
 .react-calendar__tile--now {
   color:rgb(255, 255, 255);
-  background: #54c55c;
+  background: #35BBCA;
   font-weight: bold;
   border-radius: 50%;
   
