@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LoginPage from './login';
-import ProfilePage from './assets/profile';
+import ProfilePage from '../components/profile';
 import Image from 'next/image';
 import { useSession, signIn, signOut } from "next-auth/react";
 
