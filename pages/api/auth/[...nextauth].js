@@ -8,5 +8,13 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     })
   ],
-  secret: process.env.JWT_SECRET
+  secret: process.env.JWT_SECRET,
+  callbacks: {
+    async signIn(user, account, profile) {
+      return '/homepage'; // Redirect to homepage after successful sign in
+    },
+    async redirect(url, baseUrl) {
+      return baseUrl
+    }
+  }
 })
