@@ -53,14 +53,36 @@ export default function Home() {
   return (
     <>
       <section>
-
-
-        <div className="login_page">
-          <Image src="/fake_background.png" width="1440" height="1024" className="background_login" />
-          <div className="welcome_landing">
-            <LoginPage />
-            <div className = "login_user_fake">
+        
+        <div className="sticky">
+          <div className="home">
+            <a href="#" className="name">
+              <h2>Medi<span className="yellow_text">Coin</span></h2>
+            </a>
           </div>
+          <div className="pfp-token">
+            <ul>
+              <LoginCheck />
+            </ul>
+          </div>
+        </div>
+        
+        <div className="login_page">
+          <Image src="/background.jpg" width="1440" height="1024" className="background_login"/>
+          <div className="login_text">
+            <p>Building healthy habits</p>
+            <p>one day at a time. </p>
+            <div className="LearnMore"><p>Learn More</p></div>
+          </div>
+          <div className = "login_user">
+            <Image src="/logo.png" alt="coin" width="70" height="70" className="login_icon" />
+            <p>Login</p>
+            <p>Username</p>
+            <p>Password</p>
+            <p>Forgot Username?</p>
+            <p>Forgot Password?</p>
+            <p>Remember Me</p>
+            <div className="login_buttion_index"><p>Log In</p></div>
           </div>
         </div>
 

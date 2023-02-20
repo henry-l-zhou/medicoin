@@ -9,4 +9,12 @@ export default NextAuth({
     })
   ],
   secret: process.env.JWT_SECRET
+  // callbacks: {
+  //   async signIn(user, account, profile) {
+  //     return '/home'; // Redirect to homepage after successful sign in
+  //   },
+  //   async redirect(url, baseUrl) {
+  //     return baseUrl
+  //   }
+  // }
 })

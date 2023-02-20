@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Jost:200,300,400,500,600,700,800,900&display=swap');
 
-html{
-  scroll-behavior: smooth;
-}
-
 *{
   margin: 0;
   padding: 0;
@@ -11,11 +7,7 @@ html{
   font-family: 'Jost', sans-serif;
 }
 section{
-  position: relative;
   width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background: #FFFFFF;
 }
@@ -37,7 +29,6 @@ section{
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
   padding: 10px 30px;
   display: flex;
   justify-content: space-between;
@@ -88,13 +79,6 @@ section{
   font-size: 1.5em;
 }
 
-.welcome{
-  position: relative;
-  display: block;
-  text-align: center;
-  height: auto;
-  width: auto;
-}
 .signin-message{
   position: relative;
   width: auto;
@@ -107,17 +91,28 @@ section{
   width: auto;
   font-size: 2ch;
 }
+.login-message{
+  padding-top: 30px;
+
+  position: relative;
+  width: auto;
+  font-size: 2ch;
+}
 .logout-message p{
   padding-bottom: 10px;
 }
 
-.welcome button{
+.welcome_landing button{
+  transform: translate(370px, 545px);
   padding: 5px 15px;
-  background: #0087d8;
-  color: #e8be35;
+  background: #534bbd;
+  color: white;
+  height: 50px;
+  width: 130px;
   border: none;
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 30px;
   text-decoration: none;
 }
 .upload{
@@ -143,7 +138,7 @@ output .image {
     height: 150px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
+    overflow: visible;
     position: relative;
 }
 
@@ -169,18 +164,67 @@ output .span--hidden {
     visibility: hidden;
 }
 
+.login_page{
+  position: relative;
+}
+.background_login{
+  position: absolute;
+}
+.login_text{
+  font-weight: 300;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 1;
+  height: 100vh;
+  position: relative;
+  padding-top: 26%;
+  padding-left: 13%;
+  color: white;
+}
+.LearnMore{
+  margin: 10px;
+  align-items: center;
+  text-align: center;
+  background-color: #5646c4;
+  border-radius: 5px 5px 5px 5px;
+  width: 60%;
+  transform: translateX(50px);
+}
+.login_user{
+  background-color: white;
+  border-radius: 40px 40px 40px 40px;
+  position: relative;
+  height: 300px;
+  width: 450px;
+  color: #5646c4;
+  font-weight: 800;
+  font-size: 50px;
+}
+.login_user{
+  background-color: white;
+  border-radius: 40px 40px 40px 40px;
+  position: relative;
+  height: 300px;
+  width: 450px;
+  color: #5646c4;
+  font-weight: 800;
+  font-size: 50px;
 
-
+}
+.login_icon{
+  transform: translate(40px, 50px);
+}
+.login_user p{
+  transform: translate(130px, -40px);
+}
 
 .page_elements{
   top: 13ch;
-  position: fixed;
   width: 100%;
-}
-.swiper_landing{
-  
-  justify-content: center;
-  margin: auto;
 }
 .square {
   height: 300px;
@@ -188,6 +232,12 @@ output .span--hidden {
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 3px 5px 2px #AAAAAA;
+  margin: 10px;
+}
+
+.inside_square{
+  transform: translate(20px, 20px);
+  position: flex;
 }
 
 .square h3{
@@ -202,8 +252,19 @@ output .span--hidden {
   font-weight: 450;
 }
 
+.welcome_landing{
+  padding-top: 8rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
 
+.calendar-landing, .swiper_landing, .welcome_landing{
+  justify-content: center;
+}
 
+.swiper_landing{
+  position: relative;
+}
 
 
 .App {
@@ -211,6 +272,9 @@ output .span--hidden {
   max-width: 600px; 
   
 
+}
+abbr[title] {
+  text-decoration: none;
 }
 .center-screen {
   display: flex;
@@ -278,7 +342,7 @@ output .span--hidden {
 .react-calendar__navigation button {
   font-weight: bold;
   font:'Futura';
-
+  font-size: large;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   min-width: 44px;
@@ -295,15 +359,15 @@ output .span--hidden {
 .react-calendar__month-view__weekdays {
   text-align: center;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1;
+  font-weight: 400;
+  font-size: large;
   color: #b5bab5;
   font:'Futura';
 
   
 }
 .react-calendar__month-view__weekdays__weekday {
-  padding: 0.5em;
+  text-decoration: none;
 }
 .react-calendar__month-view__weekNumbers .react-calendar__tile {
   display: flex;
@@ -338,7 +402,7 @@ output .span--hidden {
   line-height: 16px;
   color: #534bbd;
   font-weight: 2000px;
-  font-size: 14px;
+  font-size: 16px;
 
 }
 .react-calendar__tile:disabled {
@@ -350,7 +414,7 @@ output .span--hidden {
 }
 .react-calendar__tile--now {
   color:rgb(255, 255, 255);
-  background: #54c55c;
+  background: #35BBCA;
   font-weight: bold;
   border-radius: 50%;
   
@@ -417,7 +481,3 @@ output .span--hidden {
 
   
 }
-
-
-
-

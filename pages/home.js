@@ -53,17 +53,49 @@ export default function Home() {
   return (
     <>
       <section>
-
-
-        <div className="login_page">
-          <Image src="/fake_background.png" width="1440" height="1024" className="background_login" />
-          <div className="welcome_landing">
-            <LoginPage />
-            <div className = "login_user_fake">
+        <div className="sticky">
+          <div className="home">
+            <a href="#" className="name">
+              <h2>Medi<span className="yellow_text">Coin</span></h2>
+            </a>
           </div>
+          <div className="pfp-token">
+            <ul>
+              <li><a><Image src="/logo.png" alt="coin" width="18" height="18" className="icon" /></a></li>
+              <li><a href="#" className="token_amount"> {tokenMode.tokenAmount} </a></li>
+              <LoginCheck />
+            </ul>
           </div>
         </div>
+        {/* <div className="page_elements"> */}
 
+
+
+          {/* <button onClick={() => addTokens(1)}> Add 1 Token</button> */}
+          {/* <div className="upload">
+            <input type="file" accept="image/jpeg, image/png, image/jpg" onChange={handleChange} />
+            <div>
+              {imagesArray.map((image, index) => (
+                <div className="image" key={index}>
+                  <img src={URL.createObjectURL(image)} alt="image" />
+                  <span onClick={() => handleDelete(index)}>&times;</span>
+                </div>
+              ))}
+            </div>
+          </div> */}
+        {/* </div> */}
+        <div className="welcome_landing">
+          <LoginPage />
+        </div>
+        <div className="swiper_landing">
+          <SwiperPage />
+        </div>
+        <div className="calendar_landing">
+          <CalendarApp />
+        </div>
+        <div className = "bottom">
+
+        </div>
       </section>
     </>
   )

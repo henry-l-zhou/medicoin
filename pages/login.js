@@ -12,17 +12,16 @@ export default function LoginPage() {
             <p>Here are your goals for today</p>
           </div>
           
-          <div className = "logout-message">
+          {/* <div className = "logout-message">
             <p>Not {session.user.name}?</p>
             <button onClick={()=> signOut()}> Sign Out </button>
-            </div>
+            </div> */}
         </div>
       )
     } else {
       return (
-        <div>
-          <p> You are not signed in </p>
-          <button onClick={() => signIn()}> Sign in </button>
+        <div className = "logout-message">
+          <a to="/home"><button onClick={() => signIn()}> Login </button></a>
         </div>
       )
     }
