@@ -1,38 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Medicoin Hackathon!
 
-## Getting Started
+The Problem
+Seeking medical care can be challenging for many individuals due to several reasons, such as fear, cost, or inconvenience. Neglecting healthy habits and delaying check-ups can lead to more severe health issues in the future.
 
-First, run the development server:
+The Solution
+MediCoin is a web application that allows doctors to assign daily health goals to their patients, which can be accomplished in an incentivized way of earning currency for staying on top of their health. By prioritizing convenience and achievable routines, MediCoin aims to remove the stigma of inconvenience and neglect surrounding healthcare check-ups.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Our application is built using JavaScript, React, HTML, CSS, and Figma to design, and provides users with simple-to-use features, such as:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Log-in page: Users can easily create an account and/or login to securely store their health information.
+Upload your progress: By submitting proof of whatever has been done to make progress in the user’s goals, doctors can keep track of how users are doing with their health in a quicker, more regular way than check-ups.
+Home Page: The home page welcomes the user and displays any tasks for the day on customizable cards, unique for each user based on what they have been assigned by their doctor.
+Calendar view: Allows users to see the progress they’ve made by viewing the tasks they have on each day.
+Our goal is to provide an application that makes it easy and rewarding for patients to stay on top of their health goals.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![331136703_3180725145550870_1090751723759025516_n (1) (1)](https://user-images.githubusercontent.com/42553559/220221181-ea9f7369-4622-44ee-8e6c-dd51e1444182.png)
+![331003262_726856389097573_2462754445094390068_n (1)](https://user-images.githubusercontent.com/42553559/220221192-cdb2c84b-210c-4138-af50-f053e9cee064.png)
