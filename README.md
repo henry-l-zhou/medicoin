@@ -1,4 +1,4 @@
-Medicoin Hackathon!
+**Medicoin Hackathon!**
 
 The Problem
 Seeking medical care can be challenging for many individuals due to several reasons, such as fear, cost, or inconvenience. Neglecting healthy habits and delaying check-ups can lead to more severe health issues in the future.
